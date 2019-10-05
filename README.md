@@ -24,7 +24,7 @@ Essas instruções fornecerão uma cópia do projeto em execução na sua máqui
 O sofware foi feito para rodar em sistemas operacionais Windows, Linux ou Mac. Vai estar disponível no repositório duas versões do programa, uma na pasta [Programa DMS](https://github.com/danielcrash/samantha666/tree/master/Programa%20DMS) no qual basta fazer o download e executar o ``` exe ``` para rodar o programa. Já no repositório principal estarão os arquivos ``` Insert_table.py ```, ``` Update_table.py ``` e ``` Programa DMS.py ``` no qual podem ser rodados pelo [Ambiente de Desenvolvimento](https://www.python.org/downloads/) da linguagem Python. Caso opte por essa forma de execução, é necessário que mantenha o arquivo de banco de dados ``` clientes_carga01.db ``` para que funcione corretamente.
 
 ### Executando os testes
-Os arquivos ``` Insert_table.py ``` e ``` Update_table.py ``` foram usados para moldar o banco de dados préviamente existente no programa, contudo o mesmo roda independete destes, basta executar o ``` Programa DMS.py ```. Já a versão em ``` exe ``` foi feita nesse formato para facilitar a execução já que a mesma não necessita de um ambiente de desenvolvimento para tal. 
+Os arquivos ``` Insert_table.py ``` e ``` Update_table.py ``` foram usados para moldar o banco de dados préviamente existente no programa, contudo o mesmo roda independente destes, basta executar o ``` Programa DMS.py ```. Já a versão em ``` exe ``` foi feita nesse formato para facilitar a execução já que a mesma não necessita de um ambiente de desenvolvimento para tal. 
 
 ### Testes de ponta a ponta
 No menu principal temos todas as opções no qual o programa se propõe a fazer. Basta digitar no teclado a opção desejada.
@@ -39,11 +39,11 @@ Digitando a opção ``` [2] ``` será possível visualizar todos os **clientes**
 
 ![menu opção 2](https://github.com/danielcrash/samantha666/blob/master/menu%20opcao%202.png)
 
-Digitando a opção ``` [3] ``` será possível vizualizar todos os **custos** referentes as solicitações dos clientes.
+Digitando a opção ``` [3] ``` será possível visualizar todos os **custos** referentes as solicitações dos clientes.
 
 ![menu opçãp 3](https://github.com/danielcrash/samantha666/blob/master/menu%20opcao%203.png)
 
-Digitando a opção ``` [4] ``` será possível vizualizar os **preço**s, os **custos** e o total de **LUCRO** de todos os *clientes* cadastrados até o momento.
+Digitando a opção ``` [4] ``` será possível visualizar os **preço**s, os **custos** e o total de **LUCRO** de todos os *clientes* cadastrados até o momento.
 
 ![menu opçãp 4](https://github.com/danielcrash/samantha666/blob/master/menu%20opcao%204.png)
 
@@ -59,7 +59,7 @@ Digitando a opção ``` [6] ``` o programa será fechado com uma calorosa sauda�
 
 Inicialmente foi utilizado um ``` while choice != 6: ``` para criar um loop no menu principal, enquanto a opção fosse diferente de ``` [6] ```.
 O programa foi feito utilizando ``` if ``` e ``` elif ``` na sua estrutura principal para criar as opções.
-No bloco de código abaixo é possível ver o primeiro ``` if ``` no qual fazemos um acesso ao banco de dados ``` SQLite3 ``` para que possa ser inserido pelo usuário as informações. Vale lembrar que a biblioteca ``` SQLite3 ``` é nativa do Python e pode ser chamada pelo comando ``` import sqlite3 ``` ao inicio do código.
+No bloco de código abaixo é possível ver o primeiro ``` if ``` o qual fazemos um acesso ao banco de dados ``` SQLite3 ``` para que possa ser inserido pelo usuário as informações. Vale lembrar que a biblioteca ``` SQLite3 ``` é nativa do Python e pode ser chamada pelo comando ``` import sqlite3 ``` ao inicio do código.
 ```
         conn = sqlite3.connect('clientes_carga01.db')
         cursor = conn.cursor()
@@ -112,7 +112,7 @@ O trecho de código abaixo se refere ao arquivo ``` Insert_table.py ``` o qual f
 
 create_table()
 ```
-Aqui é feito uma segunda função para que seja inserido dados préviamente no programa através da syntax ``` INSERT INTO ``` e gravadas ao final atravez do comando ``` conn.commit() ```.
+Aqui é feito uma segunda função para que seja inserido dados préviamente no programa através da syntax ``` INSERT INTO ``` e gravadas ao final através do comando ``` conn.commit() ```.
 
 ```
 def dateentry():
@@ -144,7 +144,7 @@ WHERE id = ?
 - Linguagem utilizada: **Python 3.7.4**
 - Biblioteca utilizada: **SQLite3**
 - Ambiente utilizado: IDLE
-- Ambiente utilizado para vizualização do banco de dados: [Sqliteman-1.2.2](https://sourceforge.net/projects/sqliteman/files/sqliteman/1.2.2/)
+- Ambiente utilizado para visualização do banco de dados: [Sqliteman-1.2.2](https://sourceforge.net/projects/sqliteman/files/sqliteman/1.2.2/)
 - Software utilizado para criar o executável: [Auto py to exe](https://nitratine.net/blog/post/auto-py-to-exe/)
 
 ## Autores
