@@ -59,7 +59,7 @@ Digitando a opção ``` [6] ``` o programa será fechado com uma calorosa sauda�
 
 Inicialmente foi utilizado um ``` while choice != 6: ``` para criar um loop no menu principal, enquanto a opção fosse diferente de ``` [6] ```.
 O programa foi feito utilizando ``` if ``` e ``` elif ``` na sua estrutura principal para criar as opções.
-No bloco de código abaixo é póssivel ver o primeiro ``` if ``` no qual fazemos um acesso ao banco de dados ``` SQLite3 ``` para que possa ser inserido pelo usuário as informações. Vale lembrar que a biblioteca ``` SQLite3 ``` é nativa do Python e pode ser chamada pelo comando ``` import sqlite3 ``` ao inicio do código.
+No bloco de código abaixo é possível ver o primeiro ``` if ``` no qual fazemos um acesso ao banco de dados ``` SQLite3 ``` para que possa ser inserido pelo usuário as informações. Vale lembrar que a biblioteca ``` SQLite3 ``` é nativa do Python e pode ser chamada pelo comando ``` import sqlite3 ``` ao inicio do código.
 ```
         conn = sqlite3.connect('clientes_carga01.db')
         cursor = conn.cursor()
@@ -86,7 +86,7 @@ Nesse bloco de código além do comando ``` SELECT ``` nativo do banco de dados 
             print(linha)
 
 ```
-No bloco de código abaixo é utilizado atravez do ``` cursor.execute ``` a syntax ``` SELECT SUM ``` no qual faz uma soma do total dos valores preenchidos na query. No programa os valores foram do tipo ``` float ```. 
+No bloco de código abaixo é utilizado através do ``` cursor.execute ``` a syntax ``` SELECT SUM ``` no qual faz uma soma do total dos valores preenchidos na query. No programa os valores foram do tipo ``` float ```. 
 
 ```
         cursor.execute("""SELECT SUM(custo) FROM cargas;""")
@@ -102,7 +102,7 @@ Nesse bloco de código foi utilizado novamente a syntax ``` SELECT SUM ``` para 
             print('\nTOTAL DE LUCRO')
             print('R$ %.2f'%linha2)
 ```
-O trecho de código abaixo se refere ao aquivo ``` Insert_table.py ``` no qual foi utilizado para criar o banco de dados inicialmente. Este foi feito através de uma função utilizando a palavra reservada ``` def ```. A tabela foi criada para que não fosse possível deixar algum elemento nulo e também o elemento ``` id ``` usado como ``` primary key ``` sendo o mesmo ``` autoincrement ```. No final do trecho é executado a função.
+O trecho de código abaixo se refere ao arquivo ``` Insert_table.py ``` o qual foi utilizado para criar o banco de dados inicialmente. Este foi feito através de uma função utilizando a palavra reservada ``` def ```. A tabela foi criada para que não fosse possível deixar algum elemento nulo e também o elemento ``` id ``` usado como ``` primary key ``` sendo o mesmo ``` autoincrement ```. No final do trecho é executado a função.
 
 ```
   def create_table():
@@ -112,7 +112,7 @@ O trecho de código abaixo se refere ao aquivo ``` Insert_table.py ``` no qual f
 
 create_table()
 ```
-Aqui é feito uma segunda função para que seja inserido dados préviamente no programa atravez da syntax ``` INSERT INTO ``` e gravadas ao final atravez do comando ``` conn.commit() ```.
+Aqui é feito uma segunda função para que seja inserido dados préviamente no programa através da syntax ``` INSERT INTO ``` e gravadas ao final atravez do comando ``` conn.commit() ```.
 
 ```
 def dateentry():
@@ -124,7 +124,7 @@ def dateentry():
 			'2019-07-01')")
 	conn.commit()
 ```
-O bloco abaixo se refere ao arquivo ``` update_table.py ``` no qual fiz apenas para demonstrar a possibilidade de alterar o banco de dados atravez da syntax ``` UPDATE ``` e utilizando a chave primária ``` id ``` para localizar a query desejada.
+O bloco abaixo se refere ao arquivo ``` update_table.py ``` no qual fiz apenas para demonstrar a possibilidade de alterar o banco de dados através da syntax ``` UPDATE ``` e utilizando a chave primária ``` id ``` para localizar a query desejada.
 
 ```  
   id = 4
@@ -149,4 +149,4 @@ WHERE id = ?
 
 ## Autores
 
-- Daniel Nícácio
+- Daniel Nicácio
